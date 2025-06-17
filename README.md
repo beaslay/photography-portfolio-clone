@@ -1,6 +1,6 @@
-# 📸 Photography Portfolio Clone
+# 🖤 Julien – Escort Masculin
 
-A modern, responsive photography portfolio website inspired by fabianfallend.com, built with React, TypeScript, and Tailwind CSS.
+Site vitrine sobre et moderne présentant les services d'accompagnement de Julien. Construit avec React, TypeScript et Tailwind CSS.
 
 ## ✨ Features
 
@@ -29,23 +29,19 @@ A modern, responsive photography portfolio website inspired by fabianfallend.com
 
 ### Installation
 
-1. Clone the repository:
+1. Clone le dépôt:
 ```bash
-git clone https://github.com/yourusername/photography-portfolio.git
-cd photography-portfolio
+git clone <repo-url>
+cd photography-portfolio-clone
 ```
 
 2. Install dependencies:
 ```bash
-bun install
-# or
 npm install
 ```
 
 3. Start the development server:
 ```bash
-bun run dev
-# or
 npm run dev
 ```
 
@@ -127,20 +123,20 @@ src/
 ### Available Scripts
 
 ```bash
-# Development server
-bun run dev
+# Démarrage du serveur de développement
+npm run dev
 
-# Build for production
-bun run build
+# Build pour la production
+npm run build
 
-# Preview production build
-bun run preview
+# Aperçu de la build
+npm run preview
 
-# Lint code
-bun run lint
+# Lint du code
+npm run lint
 
-# Type check
-bun run type-check
+# Vérification TypeScript
+npm run type-check
 ```
 
 ### Adding New Components
@@ -161,7 +157,7 @@ bun run type-check
 ### Netlify (Recommended)
 
 1. Connect your GitHub repository to Netlify
-2. Set build command: `bun run build`
+2. Set build command: `npm run build`
 3. Set publish directory: `dist`
 4. Deploy automatically on push to main branch
 
@@ -173,9 +169,9 @@ bun run type-check
 
 ### GitHub Pages
 
-1. Install gh-pages: `bun add -D gh-pages`
+1. Install gh-pages: `npm add -D gh-pages`
 2. Add deploy script to package.json
-3. Run `bun run deploy`
+3. Run `npm run deploy`
 
 ## 📄 License
 

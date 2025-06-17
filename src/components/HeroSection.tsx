@@ -14,7 +14,7 @@ export default function HeroSection() {
           {/* Fallback image if video doesn't load */}
           <img
             src="https://ext.same-assets.com/3895633390/4058066173.jpeg"
-            alt="Photographer hero"
+            alt="Julien escort hero"
             className="w-full h-full object-cover"
           />
         </video>
@@ -26,24 +26,24 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="text-center text-white">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider mb-4 text-shadow">
-            Lorem Ipsum
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 text-shadow">
+            Julien
             <br />
             <span className="text-3xl md:text-5xl lg:text-6xl font-light">
-              Photographer
+              Accompagnant discret
             </span>
           </h1>
 
           <div className="mt-8">
             <p className="text-lg md:text-xl font-light tracking-wide mb-6">
-              Creative Visual Artist & Photography
+              Rencontres raffinées pour femmes et couples
             </p>
 
             <a
-              href="mailto:hello@photographer.com"
-              className="inline-block px-8 py-3 border border-white text-white hover:bg-white hover:text-[#2d241d] transition-all duration-300 uppercase tracking-wider text-sm font-medium"
+              href="/contact"
+              className="inline-block px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1a1a1a] transition-all duration-300 uppercase tracking-wider text-sm font-medium"
             >
-              Get in Touch
+              Prendre contact
             </a>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function AboutSection() {
               <div className="aspect-[3/4] overflow-hidden bg-[#2d241d]/5">
                 <img
                   src="https://ext.same-assets.com/3895633390/1493201828.jpeg"
-                  alt="Photographer portrait"
+                  alt="Portrait de Julien"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -23,59 +23,59 @@ export default function AboutSection() {
           {/* Bio Content */}
           <div className="order-1 lg:order-2">
             <div className="max-w-lg">
-              <h2 className="text-4xl md:text-5xl font-black uppercase tracking-wider text-[#2d241d] mb-8">
-                Lorem Ipsum
+              <h2 className="text-4xl md:text-5xl font-black tracking-wider text-[#1a1a1a] mb-8">
+                Julien
                 <br />
-                <span className="text-[#dd1e17]">Photographer</span>
+                <span className="text-[#c6a570]">Votre accompagnant</span>
               </h2>
 
-              <div className="space-y-6 text-[#2d241d]/80 leading-relaxed">
+              <div className="space-y-6 text-[#1a1a1a]/80 leading-relaxed">
                 <p className="text-lg">
-                  Lorem Ipsum is a photographer and creative visual artist based in Berlin and Vienna (Austria).
+                  Escort masculin basé à Paris, je propose une présence élégante et discrète pour vos sorties ou moments de détente.
                 </p>
 
                 <p>
-                  Starting 2014, after a career as interior designer, they conquered Europe with their unique style as photographer. Their work spans editorial, fashion, portrait, and commercial photography with a focus on bold, contemporary aesthetics.
+                  Mon parcours m'a mené de la littérature à l'accompagnement haut de gamme. J'aime les rencontres où l'écoute précède le geste.
                 </p>
 
                 <p>
-                  With a distinctive eye for composition and lighting, Lorem creates striking visual narratives that capture the essence of modern culture and style.
+                  Je suis là, simplement, pour souligner votre pas et cultiver une atmosphère sereine.
                 </p>
               </div>
 
               {/* Contact Links */}
               <div className="mt-10 space-y-4">
-                <p className="text-sm uppercase tracking-wider text-[#2d241d]/60 mb-4">
-                  Work inquiries are welcome:
+                <p className="text-sm uppercase tracking-wider text-[#1a1a1a]/60 mb-4">
+                  Pour toute demande :
                 </p>
 
                 <div className="flex flex-col space-y-3">
                   <a
-                    href="mailto:hello@photographer.com"
-                    className="inline-flex items-center text-[#2d241d] hover:text-[#dd1e17] transition-colors duration-300"
+                    href="https://t.me/julienescort"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-[#1a1a1a] hover:text-[#c6a570] transition-colors duration-300"
                   >
-                    <span className="text-sm uppercase tracking-wider">Email</span>
-                    <span className="ml-3">hello@photographer.com</span>
+                    <span className="text-sm uppercase tracking-wider">Telegram</span>
+                    <span className="ml-3">@julienescort</span>
                   </a>
 
                   <a
-                    href="https://instagram.com/photographer"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-[#2d241d] hover:text-[#dd1e17] transition-colors duration-300"
+                    href="mailto:contact@proton.me"
+                    className="inline-flex items-center text-[#1a1a1a] hover:text-[#c6a570] transition-colors duration-300"
                   >
-                    <span className="text-sm uppercase tracking-wider">Instagram</span>
-                    <span className="ml-3">@photographer</span>
+                    <span className="text-sm uppercase tracking-wider">Email sécurisé</span>
+                    <span className="ml-3">contact@proton.me</span>
                   </a>
                 </div>
               </div>
 
               {/* Location */}
-              <div className="mt-8 pt-8 border-t border-[#2d241d]/20">
-                <p className="text-sm text-[#2d241d]/60">
-                  <span className="uppercase tracking-wider">Based in</span>
+              <div className="mt-8 pt-8 border-t border-[#1a1a1a]/20">
+                <p className="text-sm text-[#1a1a1a]/60">
+                  <span className="uppercase tracking-wider">Basé à</span>
                   <br />
-                  <span className="text-base text-[#2d241d] font-medium">Berlin & Vienna</span>
+                  <span className="text-base text-[#1a1a1a] font-medium">Paris</span>
                 </p>
               </div>
             </div>

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#2d241d] text-white py-16">
+    <footer className="bg-[#1a1a1a] text-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Contact Info */}
@@ -8,39 +8,37 @@ export default function Footer() {
             <h3 className="text-xl font-bold uppercase tracking-wider mb-6">Contact</h3>
             <div className="space-y-3">
               <a
-                href="mailto:hello@photographer.com"
-                className="block hover:text-[#dd1e17] transition-colors duration-300"
+                href="mailto:contact@proton.me"
+                className="block hover:text-[#c6a570] transition-colors duration-300"
               >
-                hello@photographer.com
+                contact@proton.me
               </a>
               <a
-                href="https://instagram.com/photographer"
+                href="https://t.me/julienescort"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block hover:text-[#dd1e17] transition-colors duration-300"
+                className="block hover:text-[#c6a570] transition-colors duration-300"
               >
-                @photographer
+                @julienescort
               </a>
             </div>
           </div>
 
           {/* Location */}
           <div>
-            <h3 className="text-xl font-bold uppercase tracking-wider mb-6">Location</h3>
+            <h3 className="text-xl font-bold uppercase tracking-wider mb-6">Ville</h3>
             <div className="space-y-2 text-white/80">
-              <p>Berlin, Germany</p>
-              <p>Vienna, Austria</p>
+              <p>Paris, France</p>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold uppercase tracking-wider mb-6">Services</h3>
+            <h3 className="text-xl font-bold uppercase tracking-wider mb-6">Prestations</h3>
             <div className="space-y-2 text-white/80">
-              <p>Editorial Photography</p>
-              <p>Fashion Photography</p>
-              <p>Portrait Photography</p>
-              <p>Commercial Work</p>
+              <p>Rencontre 2&nbsp;heures — 300&nbsp;€</p>
+              <p>Soirée élégante — 400&nbsp;€</p>
+              <p>Nuit complète — 2&nbsp;000&nbsp;€</p>
             </div>
           </div>
         </div>
@@ -50,17 +48,12 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-white/60 text-sm">
-              <p>© 2024 Lorem Ipsum Photographer</p>
+              <p>© 2024 Julien Escort</p>
             </div>
 
             {/* Credits */}
             <div className="text-white/60 text-sm text-center md:text-right">
-              <p>
-                Concept, Design & Development by{' '}
-                <span className="text-white">
-                  Creative Studio
-                </span>
-              </p>
+              <p>Site personnel, contenu fictif.</p>
             </div>
           </div>
 
@@ -78,9 +71,9 @@ export default function Footer() {
           </div>
 
           {/* Satirical Cookie Notice */}
-          <div className="mt-8 p-4 bg-[#dd1e17]/10 border border-[#dd1e17]/20 rounded">
+          <div className="mt-8 p-4 bg-[#c6a570]/10 border border-[#c6a570]/20 rounded">
             <p className="text-xs text-white/60 italic">
-              🍪 This website uses cookies to enhance your browsing experience and definitely not to sell your data to interdimensional entities. By continuing to use this site, you agree to our totally normal and not at all suspicious data practices.
+              🍪 Ce site n'utilise que des cookies essentiels.
             </p>
           </div>
         </div>
