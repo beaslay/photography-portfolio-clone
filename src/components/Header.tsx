@@ -1,71 +1,55 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'work', label: 'Work', count: 9 },
-    { id: 'about', label: 'About' },
+    { id: "home", label: "Accueil" },
+    { id: "about", label: "À propos" },
+    { id: "services", label: "Prestations" },
+    { id: "contact", label: "Contact" },
   ];
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
 
-    if (sectionId === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (sectionId === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 80; // Height of fixed header
+      const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      window.scrollTo({ top: elementPosition, behavior: "smooth" });
     }
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#fbfafa]/95 backdrop-blur-sm border-b border-[#2d241d]/10">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo/Contact */}
-          <div className="text-[#2d241d] font-medium">
-            <a
-              href="mailto:hello@photographer.com"
-              className="hover:text-[#dd1e17] transition-colors duration-300"
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#f7f5ee]/90 backdrop-blur-sm border-b border-[#1f1f1f]/10">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <a
+          href="mailto:julien@pm.me"
+          className="text-[#1f1f1f] hover:text-[#d4af37] transition-colors"
+        >
+          julien@pm.me
+        </a>
+        <nav className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`text-sm uppercase tracking-wider transition-colors ${
+                activeSection === item.id
+                  ? "text-[#d4af37]"
+                  : "text-[#1f1f1f] hover:text-[#d4af37]"
+              }`}
             >
-              hello@photographer.com
-            </a>
-          </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`text-sm uppercase tracking-wider transition-colors duration-300 ${
-                  activeSection === item.id
-                    ? 'text-[#dd1e17]'
-                    : 'text-[#2d241d] hover:text-[#dd1e17]'
-                }`}
-              >
-                {item.label}
-                {item.count && <span className="ml-1">({item.count})</span>}
-              </button>
-            ))}
-          </nav>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button className="text-[#2d241d] hover:text-[#dd1e17] transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              {item.label}
             </button>
-          </div>
-        </div>
+          ))}
+        </nav>
       </div>
     </header>
   );
