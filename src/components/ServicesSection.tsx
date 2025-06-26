@@ -1,4 +1,6 @@
-import React from "react";
+// 🔹 TYPE: React component
+// 🔸 BUT : Section prestations animée
+import { motion } from "framer-motion";
 
 interface Service {
   id: number;
@@ -30,7 +32,14 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-[#f7f5ee]" id="services">
+    <motion.section
+      className="py-20 bg-[#f7f5ee]"
+      id="services"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="container mx-auto px-6 text-[#1f1f1f]">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -55,7 +64,15 @@ export default function ServicesSection() {
             </div>
           ))}
         </div>
+        <div className="text-center mt-12">
+          <button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="btn-primary"
+          >
+            Demander une réservation
+          </button>
+        </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

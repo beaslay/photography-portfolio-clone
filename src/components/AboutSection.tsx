@@ -1,6 +1,17 @@
+// 🔹 TYPE: React component
+// 🔸 BUT : Section À propos animée au scroll
+import { motion } from "framer-motion";
+
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-white" id="about">
+    <motion.section
+      className="py-20 bg-white"
+      id="about"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-[#1f1f1f]">
         <div className="order-2 lg:order-1">
           <div className="relative">
@@ -44,6 +55,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
