@@ -52,7 +52,7 @@
 
   /* Custom button styles */
   .btn-primary {
-    @apply px-8 py-3 bg-[#d4af37] text-white hover:bg-[#d4af37]/90 transition-all duration-300 uppercase tracking-wider text-sm font-medium;
+    @apply px-8 py-3 bg-[color:var(--color-gold)] text-white hover:bg-[color:var(--color-gold)]/90 transition-all duration-300 uppercase tracking-wider text-sm font-medium;
   }
 
   .btn-outline {
@@ -82,6 +82,8 @@
 
 @layer base {
   :root {
+    --color-gold: #d4af37;
+    --color-beige: #f7f5ee;
     --background: 43 9% 96%;
     --foreground: 40 5% 10%;
     --card: 43 9% 96%;

@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Star } from "lucide-react";
 
 interface Service {
   id: number;
@@ -30,7 +32,13 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-[#f7f5ee]" id="services">
+    <motion.section
+      className="py-20 bg-[#f7f5ee]"
+      id="services"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto px-6 text-[#1f1f1f]">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -45,9 +53,12 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="p-6 border border-[#d4af37]/30 rounded"
+              className="p-6 border border-[#d4af37]/30 rounded transition-shadow hover:shadow-lg"
             >
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
+                <Star className="text-[color:var(--color-gold)]" size={20} />
+                {service.title}
+              </h3>
               <p className="mb-4 opacity-80">{service.description}</p>
               <p className="text-[#d4af37] font-bold text-lg">
                 {service.price}
@@ -55,7 +66,12 @@ export default function ServicesSection() {
             </div>
           ))}
         </div>
+        <div className="text-center mt-12">
+          <a href="#contact" className="btn-outline">
+            Demander un devis
+          </a>
+        </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
