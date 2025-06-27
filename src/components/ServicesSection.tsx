@@ -1,61 +1,25 @@
-import React from "react";
+import { motion } from "framer-motion";
 
-interface Service {
-  id: number;
-  title: string;
-  description: string;
-  price: string;
-}
-
-const services: Service[] = [
-  {
-    id: 1,
-    title: "Rencontre 2 heures",
-    description: "Une parenthèse douce pour faire connaissance.",
-    price: "300 €",
-  },
-  {
-    id: 2,
-    title: "Soirée 2 heures",
-    description: "Présence élégante pour vos sorties ou événements.",
-    price: "400 €",
-  },
-  {
-    id: 3,
-    title: "Soirée complète",
-    description: "Complicité jusqu’au petit matin (21h à 8h).",
-    price: "2 000 €",
-  },
+const services = [
+  { title: "Rencontre", desc: "Deux heures pour faire connaissance." },
+  { title: "Soirée", desc: "Présence élégante pour vos sorties." },
+  { title: "Nuit complète", desc: "Complicité jusqu'au matin." },
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-[#f7f5ee]" id="services">
-      <div className="container mx-auto px-6 text-[#1f1f1f]">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Prestations & Tarifs
-          </h2>
-          <p className="max-w-2xl mx-auto text-lg opacity-80">
-            Chaque rencontre est unique. Voici quelques suggestions de moments à
-            partager.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="p-6 border border-[#d4af37]/30 rounded"
-            >
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="mb-4 opacity-80">{service.description}</p>
-              <p className="text-[#d4af37] font-bold text-lg">
-                {service.price}
-              </p>
+    <motion.section id="services" className="py-20 bg-gray-50">
+      <div className="max-w-5xl mx-auto px-4">
+        <h2 className="text-3xl font-serif mb-8">Prestations</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {services.map((s) => (
+            <div key={s.title} className="p-4 border">
+              <h3 className="font-semibold mb-2">{s.title}</h3>
+              <p>{s.desc}</p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
