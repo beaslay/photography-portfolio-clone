@@ -45,11 +45,11 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="p-6 border border-[#d4af37]/30 rounded"
+              className="p-6 border border-[var(--color-gold)]/30 rounded"
             >
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="mb-4 opacity-80">{service.description}</p>
-              <p className="text-[#d4af37] font-bold text-lg">
+              <p className="text-[var(--color-gold)] font-bold text-lg">
                 {service.price}
               </p>
             </div>

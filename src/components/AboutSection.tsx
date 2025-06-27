@@ -12,7 +12,7 @@ export default function AboutSection() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#d4af37] -z-10" />
+            <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[var(--color-gold)] -z-10" />
           </div>
         </div>
         <div className="order-1 lg:order-2">
@@ -37,7 +37,7 @@ export default function AboutSection() {
             </p>
             <a
               href="mailto:julien@pm.me"
-              className="text-[#d4af37] hover:underline"
+              className="text-[var(--color-gold)] hover:underline"
             >
               julien@pm.me
             </a>

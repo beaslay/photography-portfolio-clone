@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Menu } from "lucide-react";
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
     { id: "home", label: "Accueil" },
@@ -31,19 +33,22 @@ export default function Header() {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a
           href="mailto:julien@pm.me"
-          className="text-[#1f1f1f] hover:text-[#d4af37] transition-colors"
+          className="text-[#1f1f1f] hover:text-[var(--color-gold)] transition-colors"
         >
           julien@pm.me
         </a>
-        <nav className="hidden md:flex items-center space-x-8">
+        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
+          <Menu />
+        </button>
+        <nav className={`flex-col md:flex-row md:flex items-center space-x-8 ${menuOpen ? 'flex' : 'hidden'} md:space-x-8`}>
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={`text-sm uppercase tracking-wider transition-colors ${
                 activeSection === item.id
-                  ? "text-[#d4af37]"
-                  : "text-[#1f1f1f] hover:text-[#d4af37]"
+                  ? "text-[var(--color-gold)]"
+                  : "text-[#1f1f1f] hover:text-[var(--color-gold)]"
               }`}
             >
               {item.label}

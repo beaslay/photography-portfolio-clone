@@ -6,7 +6,7 @@ export default function Footer() {
           <p>Contact direct :</p>
           <a
             href="mailto:julien@pm.me"
-            className="text-[#d4af37] hover:underline"
+            className="text-[var(--color-gold)] hover:underline"
           >
             julien@pm.me
           </a>
@@ -15,7 +15,7 @@ export default function Footer() {
             href="https://t.me/julien_escort"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#d4af37] hover:underline"
+            className="text-[var(--color-gold)] hover:underline"
           >
             Telegram
           </a>
