@@ -37,6 +37,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/contact.js"
     ],
+    "/public-gallery": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/public-gallery.js"
+    ],
     "/services": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
