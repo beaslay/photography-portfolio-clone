@@ -32,10 +32,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/about.js"
     ],
-    "/public-gallery": [
+    "/contact": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/public-gallery.js"
+      "static/chunks/pages/contact.js"
     ],
     "/services": [
       "static/chunks/webpack.js",
